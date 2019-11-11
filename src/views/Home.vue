@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <span>
+        <home-hero></home-hero>
+        <home-navigation></home-navigation>
+        <recipes @clickData="addRecipeCard"></recipes>
+        <add-recipe :newRecipe="childData"></add-recipe>
+    </span>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HomeHero from '@/components/HomeHero'
+import HomeNavigation from '@/components/HomeNavigation'
+import Recipes from '@/components/Recipes'
+import AddRecipe from '@/components/AddRecipe'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    HomeHero,
+    HomeNavigation,
+    Recipes,
+    AddRecipe
+  },
+  data: function () {
+    return {
+      childData: false
+    }
+  },
+  methods: {
+    addRecipeCard (variable) {
+      this.childData = variable
+    }
   }
 }
 </script>
