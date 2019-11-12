@@ -6,34 +6,14 @@ const Promise = require('bluebird')
 
 const DB = new DatabaseAPI(DB_PATH, dbRecipeSchema.recipeDbSchema)
 
-// ADD
-function addRecipes() {
+// ADD RECIPES
+function addRecipes () {
     return Promise.all(recipeData.map((recipe) => {
-        const { name, img, peopleCount, ingredients, veg, instructions } = recipe
-        console.log('recipe in dbservice', recipe)
-        return DB.addRecipe(name, img, peopleCount, ingredients, veg, instructions)
+        return DB.addRecipe(recipe)
     }))
 }
 
-//addRecipes()
-
-
-function listAllRecipes(recipes) {
-    recipes.forEach(recipe => {
-        console.log('listRecipe')
-        console.log(recipe.name)
-    })
-}
-// GET ALL
-// DB.getAll()
-
-// DELETE ALL
-//DB.clearDb()
-
-// DELETE SPECIFIC RECIPE 
-//DB.deleteRecipe(1)
-
-// UPDATE RECIPE 
+addRecipes()
 
 // CLOSE THE DB
 DB.closeDb()

@@ -1,8 +1,8 @@
 <template>
     <span>
         <home-hero></home-hero>
-        <home-navigation></home-navigation>
-        <recipes @clickData="addRecipeCard"></recipes>
+        <home-navigation @clickData="openDialog"></home-navigation>
+        <recipes></recipes>
         <add-recipe :newRecipe="childData"></add-recipe>
     </span>
 </template>
@@ -27,7 +27,7 @@ export default {
     }
   },
   methods: {
-    addRecipeCard (variable) {
+    openDialog (variable) {
       this.childData = variable
     }
   }

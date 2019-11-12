@@ -1,68 +1,42 @@
-<template >
-  <v-container grid-list-lg v-if="newRecipe">
-  <v-layout row wrap>
-      <v-flex xs12 sm12 md4>
-        <v-card>
-          <v-responsive>
-            <v-img :src="require('@/assets/base.jpg')" height="300px" v-bind:alt="recipe">
-             <v-container fill-height fluid>
-              <v-layout fill-height>
-              </v-layout>
-            </v-container>
-            </v-img>
-          </v-responsive>
-               <v-card-text>
-                        <v-form
-                          ref="form"
-                          v-model="valid"
-                          :lazy-validation="lazy"
-                        >
-                        <v-text-field
-                          v-model="recipe.name"
-                          :counter="10"
-                          label="Name"
-                          required
-                        ></v-text-field>
-                        <v-text-field
-                          v-model="recipe.ingredients"
-                          :counter="100"
-                          label="Ingredients"
-                          multi-line
-                          :rows="2"
-                          required
-                        ></v-text-field>
-                         <v-col cols="12" sm="6">
-                        <v-text-field
-                          v-model="recipe.peopleCount"
-                          type="number"
-                          label="Serves"
-                          required
-                        ></v-text-field></v-col>
-                         <v-col cols="12" sm="6">
-                        <v-text-field
-                          v-model="recipe.veg"
-                          type="number"
-                          label="Vegatarian? 1 for yes"
-                          required
-                        ></v-text-field> </v-col>
-                        <v-text-field
-                          v-model="recipe.instructions"
-                          type="text"
-                          :counter="100"
-                          multi-line
-                          :rows="2"
-                          label="Instructions"
-                          required
-                        ></v-text-field>
-                         <v-card-actions>
-                        <div class="close"><v-btn outline block dark color="blue" @click="addRecipe()">Save</v-btn></div>
-                      </v-card-actions>
-                   </v-form>
-              </v-card-text>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-container>
+<template>
+<v-row justify="center" v-if="newRecipe">
+    <v-dialog v-model="newRecipe" persistent max-width="600px">
+      <v-card>
+        <v-card-title>
+          <span class="headline">New Recipe</span>
+        </v-card-title>
+        <v-card-text>
+          <v-form ref="form" v-model="valid" :lazy-validation="lazy">
+          <v-container>
+            <v-row>
+              <v-col cols="12">
+                <v-text-field label="Name*" v-model="recipe.name" required></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field label="Ingredients*" v-model="recipe.ingredients" type="text" :counter="100" multi-line :rows="2" required></v-text-field>
+              </v-col>
+              <v-col cols="12">
+                <v-text-field label="Instructions*" v-model="recipe.instructions" type="text" :counter="100" multi-line :rows="2" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-text-field v-model="recipe.peopleCount" type="number" label="Serves" required></v-text-field>
+              </v-col>
+              <v-col cols="12" sm="6">
+                <v-text-field v-model="recipe.veg" type="number" label="Vegatarian? 1 for yes" required></v-text-field>
+              </v-col>
+            </v-row>
+          </v-container>
+          <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
+          <v-btn color="blue darken-1" text @click="addRecipe()">Save</v-btn>
+        </v-card-actions>
+          </v-form>
+          <small>*indicates required field</small>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
+  </v-row>
 </template>
 
 <script>
@@ -120,6 +94,9 @@ export default {
     },
     validateField () {
       this.$refs.form.validate()
+    },
+    close () {
+      this.$emit('input', !this.value)
     }
   }
 }

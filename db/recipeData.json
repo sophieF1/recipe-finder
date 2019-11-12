@@ -21,29 +21,5 @@
     "ingredients": "Vodka, 2 Lemons, Honey, 1 Cucumber, Haribo (of choice), Ice",
     "veg": 1,
     "instructions": "1. Use a vegetable peeler to grate the cucumber into slices. Place into the side of the glass. 2. Cut the lemons in half and squeeze the juice into a cocktail shaker or meddling glass. 3. Mix in with a generous squeeze of honey. 4. Add ice into the shaker with one shot of vodka per person. 5. Mix well and then pour over ice into a glass." 
-},
-{
-    "name": "PiRi PiRi",
-    "img": "piriPiri.jpg", 
-    "peopleCount": 4,
-    "ingredients": "1 Chicken, 4 Red Chillis, 3 Garlic Gloves, 2tbsp Olive Oil, 2 tsp sweet paprika",
-    "veg": 0,
-    "instructions": "1. To spatchcock the chicken, flip it over so the backbone is facing you. Using a sturdy pair of kitchen scissors or poultry scissors, cut down either side of the backbone, then discard. Turn the chicken over and push down firmly on the breastbone to flatten out the bird. Make a few slashes in each leg joint. \r\n2. Put the chillies and garlic in a food processor with a good pinch of salt, or use a pestle and mortar. Blend to a paste, then add the paprika and olive oil. Mix well, then smear over the chicken. Leave to marinate for at least 1 hr or overnight if possible. Can be frozen at this stage.\r\n3. Fire up the barbecue. When the flames have died down, place the chicken on the centre of the barbecue, skin-side down, and cook for 15-20 mins until nicely charred. Flip the chicken over and continue cooking for another 5-15 mins until cooked through. Check that the juices run clear, as the heat of every barbecue will vary. To cook in the oven, heat to 200C\/180C fan\/gas 6 and cook for 35-40 mins on a baking tray. To char the skin, grill for a further 5-10 mins. " 
-},
-{
-    "name": "Thai Pumpkin Soup",
-    "img": "thaiSoup.jpg", 
-    "peopleCount": 6,
-    "ingredients": "1½ kg pumpkin, 1 Onion, 850ml vegetable stock, 1 red chilli, 2 tsp sweet paprika, ginger, Coconut milk",
-    "veg": 1,
-    "instructions": "1. Heat oven to 200C\/180C fan\/gas 6. Toss the pumpkin in a roasting tin with half the oil and seasoning, then roast for 30 mins until golden and tender. 2. Meanwhile, put the remaining oil in a pan with the onion and ginger. Gently cook for 8-10 mins until softened. Stir in the roasted pumpkin, all but 3 tbsp of the coconut milk and the stock. Bring to a simmer, cook for 5 mins. Cool for a few mins, then whizz until smooth with a hand blender, or in a large blender in batches. Return to the pan to heat through, seasoning with salt, pepper, lime juice and sugar, if it needs it. Serve drizzled with the remaining coconut milk and scattered with chilli, if you like." 
-},
-{
-    "name": "Mixology",
-    "img": "mixology.jpg", 
-    "peopleCount": 4,
-    "ingredients": "Vodka, 2 Lemons, Honey, 1 Cucumber, Haribo (of choice), Ice",
-    "veg": 1,
-    "instructions": "1. Use a vegetable peeler to grate the cucumber into slices. Place into the side of the glass. 2. Cut the lemons in half and squeeze the juice into a cocktail shaker or meddling glass. 3. Mix in with a generous squeeze of honey. 4. Add ice into the shaker with one shot of vodka per person. 5. Mix well and then pour over ice into a glass." 
 }
 ]
