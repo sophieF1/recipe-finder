@@ -9,19 +9,24 @@ Testing framework used here is chai and mocha, for the backend
 
 Features of this app currently include: displaying current recipes stored in db, add a recipe, update a recipe and delete a recipe   
 
-## Project setup
+## Project setup to run locally
 ```
 npm install
 ```
 ```
 npm run db 
 ```
-
+```
+npm run serve-fe
+```
+```
+npm run serve-be
+```
 ### Compiles and hot-reloads for vue development
 ```
 npm run serve-fe
 ```
-### Starts express server
+### Starts express server 
 ```
 npm run serve-be
 ```
