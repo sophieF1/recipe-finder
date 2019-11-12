@@ -2,11 +2,11 @@
 
 A single page web application built using Vue.js, Vuex, Vuetify, Express, NodeJS, SQLite. 
 
-Frontend client is built in VueJS. It's fast, provides reactive components and allows easy future modification, plus ideal for state management and routing. 
-For the backend: Express is the middleware to handle HTTP requests and routing, SQLite (embedded relational database) to store the data and NodeJs is the server that the application runs on.
-Veutify (material design component framework) used for styling
-
-Features of this app currently include: displaying current recipes stored in db, add a recipe, update a recipe and delete a recipe. 
+Frontend client is built in VueJS. It's fast, provides reactive components and allows easy future modification, plus ideal for state management and routing.  
+Backend: Express is the middleware to handle HTTP requests and routing, SQLite (embedded relational database) to store the data and NodeJs is the server that the application runs on.  
+Veutify (material design component framework) used for styling  
+Testing framework used here is chai and mocha, for the backend    
+Features of this app currently include: displaying current recipes stored in db, add a recipe, update a recipe and delete a recipe   
 
 ## Project setup
 ```
