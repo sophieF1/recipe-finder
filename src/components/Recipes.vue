@@ -20,7 +20,8 @@
                         <div class="title black--text">{{recipe.name}}</div>
                         <div class="subheading black--text">Ingredients</div>
                         <ul>
-                          <li class="black--text" v-for="(ingredient, i) in ingredients[0]" :key="i">{{ingredient}} </li>
+                          <li class="black--text">{{ splitter(recipe.ingredients) }} </li>
+                          <!-- <li class="black--text" v-for="(ingredient, i) in ingredients[0]" :key="i">{{ingredient}} </li> -->
                         </ul>
                         <div class="subheading black--text">Serves {{recipe.peopleCount}}</div>
               </v-card-text>
@@ -82,13 +83,8 @@ export default {
         return 'V'
       }
     },
-    splitter (recipes) {
-      let ingredientArr = []
-      recipes.forEach(function (obj) {
-        let string = obj['ingredients']
-        ingredientArr.push(string.split([', ']))
-      })
-      this.ingredients = ingredientArr
+    splitter (ingredient) {
+      return ingredient.split([', '])
     },
     deleteRecipe (id) {
       fetch(API_URL + '/' + id, {
